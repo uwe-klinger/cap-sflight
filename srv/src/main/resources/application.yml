@@ -39,3 +39,8 @@ cds:
     odata-v4:
         endpoint:
             path: "/"
+
+---
+spring:
+    profiles: devtools
+    devtools.remote.secret: capjavarocks
