@@ -38,5 +38,6 @@ dist/
 .project
 .settings
 .classpath
+devtools.trigger
 # .vscode/*
 # IMPORTANT: Do not exclude .vscode please!
