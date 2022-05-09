@@ -95,6 +95,7 @@ annotate TravelService.Travel with @UI : {
     { Value : to_Agency_AgencyID     },
     { Value : to_Customer_CustomerID },
     { Value : Description            },
+    //{ Value : Rating                 },
     {
       $Type       : 'UI.DataField',
       Value       : TravelStatus_code,

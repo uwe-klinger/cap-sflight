@@ -16,6 +16,7 @@ entity Travel : managed {
   EndDate        : Date;
   BookingFee     : Decimal(16, 3);
   TotalPrice     : Decimal(16, 3) @readonly;
+  //Rating         : Integer default 5;
   CurrencyCode   : Currency;
   Description    : String(1024);
   TravelStatus   : Association to TravelStatus @readonly;
