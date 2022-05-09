@@ -4,15 +4,34 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
+  
     {
       "type": "java",
-      "name": "Launch SFlightApplication",
+      "name": "Launch SFlight",
       "request": "launch",
       "mainClass": "com.sap.cap.sflight.SFlightApplication",
-      "projectName": "srv"
+      "projectName": "srv",
+      "args": "--spring.profiles.active=default"
     },
     {
-      "name": "cds watch",
+      "type": "java",
+      "name": "Launch SFlight with devtools-trigger",
+      "request": "launch",
+      "mainClass": "com.sap.cap.sflight.SFlightApplication",
+      "projectName": "srv",
+      "args": "--spring.profiles.active=devtools,default"
+    },
+    {
+      "type": "java",
+      "name": "Launch SFlight with remote devtools",
+      "request": "launch",
+      "mainClass": "org.springframework.boot.devtools.RemoteSpringApplication",
+      "projectName": "srv",
+      "args": "https://cdsnode-cdsjava-sflight-srv.cfapps.sap.hana.ondemand.com --spring.profiles.active=devtools"
+    },
+    {
+      "name": "node.js cds watch",
       "command": "npx cds watch",
       "env": {
         "DEBUG": "sqlite"
