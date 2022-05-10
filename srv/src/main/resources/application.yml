@@ -5,7 +5,9 @@ management:
                 include: "*"
 ---
 spring:
-    profiles: default
+    config:
+        activate:
+            on-profile: default
     web.resources.static-locations: "file:./app"
 cds:
     security.mock.users:
@@ -33,8 +35,9 @@ server:
 
 ---
 spring:
-    profiles: cloud
-
+    config:
+        activate:
+            on-profile: cloud
 cds:
     odata-v4:
         endpoint:
@@ -42,11 +45,12 @@ cds:
 
 ---
 spring:
-    profiles: devtools
+    config:
+        activate:
+            on-profile: devtools
     devtools:
         remote:
             secret: capjavarocks
         restart:
             trigger-file: devtools.trigger
-
 cds.security.openUnrestrictedEndpoints: true
