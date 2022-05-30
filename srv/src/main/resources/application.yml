@@ -53,4 +53,13 @@ spring:
             secret: capjavarocks
         restart:
             trigger-file: devtools.trigger
+#cds.security.openUnrestrictedEndpoints: true
+---
+spring:
+    config:
+        activate:
+            on-profile: devtools-remote
+    devtools:
+        remote:
+            secret: capjavarocks
 cds.security.openUnrestrictedEndpoints: true

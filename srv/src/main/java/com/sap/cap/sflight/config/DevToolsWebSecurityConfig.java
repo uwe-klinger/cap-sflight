@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 @Order(1)
-@Profile("devtools")
+@Profile({"devtools", "devtools-remote"})
 public class DevToolsWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	private static final String SPRING_BOOT_DEVTOOLS_ENDPOINT = "/.~~spring-boot!~/**";

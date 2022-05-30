@@ -5,10 +5,17 @@
   "version": "0.2.0",
   "configurations": [
 
-  
     {
       "type": "java",
-      "name": "Launch SFlight",
+      "name": "Launch SFlight for remote devtools",
+      "request": "launch",
+      "mainClass": "com.sap.cap.sflight.SFlightApplication",
+      "projectName": "srv",
+      "args": "--spring.profiles.active=default,devtools-remote"
+    },
+    {
+      "type": "java",
+      "name": "Launch SFlight with devtools",
       "request": "launch",
       "mainClass": "com.sap.cap.sflight.SFlightApplication",
       "projectName": "srv",
@@ -24,11 +31,11 @@
     },
     {
       "type": "java",
-      "name": "Launch SFlight with remote devtools",
+      "name": "Launch remote devtools",
       "request": "launch",
       "mainClass": "org.springframework.boot.devtools.RemoteSpringApplication",
       "projectName": "srv",
-      "args": "https://cdsnode-cdsjava-sflight-srv.cfapps.sap.hana.ondemand.com --spring.profiles.active=devtools"
+      "args": "http://localhost:4004 --spring.profiles.active=devtools"
     },
     {
       "name": "node.js cds watch",
