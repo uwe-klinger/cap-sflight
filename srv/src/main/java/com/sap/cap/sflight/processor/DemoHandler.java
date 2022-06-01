@@ -9,16 +9,15 @@ import com.sap.cds.services.handler.annotations.ServiceName;
 
 import org.springframework.stereotype.Component;
 
-import cds.gen.travelservice.Airport;
-import cds.gen.travelservice.Airport_;
+import cds.gen.travelservice.Travel;
 import cds.gen.travelservice.TravelService_;
+import cds.gen.travelservice.Travel_;
 
 @Component
 @ServiceName(TravelService_.CDS_NAME)
-public class AirportHandler implements EventHandler {
-	
-	@After(entity = Airport_.CDS_NAME, event = CdsService.EVENT_READ)
-	public void modifyCode(List<Airport> airports) {
-		airports.forEach(airport -> airport.setCity("stadt"));
+public class DemoHandler implements EventHandler {
+	@After(entity = Travel_.CDS_NAME, event = CdsService.EVENT_READ)
+	public void modify(List<Travel> travels) {
+		//travels.forEach(travel -> travel.setDescription("I ❤️ ride my bicycle."));
 	}
 }
