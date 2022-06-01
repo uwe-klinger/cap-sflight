@@ -4,18 +4,17 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-
     {
       "type": "java",
-      "name": "Launch SFlight for remote devtools",
+      "name": "SFlight without devtools",
       "request": "launch",
       "mainClass": "com.sap.cap.sflight.SFlightApplication",
       "projectName": "srv",
-      "args": "--spring.profiles.active=default,devtools-remote"
+      "args": "--spring.profiles.active=devtools-no-restart,default"
     },
     {
       "type": "java",
-      "name": "Launch SFlight with devtools",
+      "name": "SFlight with devtools",
       "request": "launch",
       "mainClass": "com.sap.cap.sflight.SFlightApplication",
       "projectName": "srv",
@@ -23,7 +22,7 @@
     },
     {
       "type": "java",
-      "name": "Launch SFlight with devtools-trigger",
+      "name": "SFlight with devtools-trigger",
       "request": "launch",
       "mainClass": "com.sap.cap.sflight.SFlightApplication",
       "projectName": "srv",
@@ -31,11 +30,19 @@
     },
     {
       "type": "java",
-      "name": "Launch remote devtools",
+      "name": "SFlight for remote devtools",
+      "request": "launch",
+      "mainClass": "com.sap.cap.sflight.SFlightApplication",
+      "projectName": "srv",
+      "args": "--spring.profiles.active=default,devtools-remote"
+    },
+    {
+      "type": "java",
+      "name": "remote devtools",
       "request": "launch",
       "mainClass": "org.springframework.boot.devtools.RemoteSpringApplication",
       "projectName": "srv",
-      "args": "http://localhost:4004 --spring.profiles.active=devtools"
+      "args": "http://localhost:4004 --spring.profiles.active=devtools,devtools-no-livereload"
     },
     {
       "name": "node.js cds watch",
