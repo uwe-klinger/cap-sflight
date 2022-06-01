@@ -63,3 +63,22 @@ spring:
         remote:
             secret: capjavarocks
 cds.security.openUnrestrictedEndpoints: true
+---
+spring:
+    config:
+        activate:
+            on-profile: devtools-no-restart
+    devtools:
+        restart:
+            enabled: false
+        remote:
+            secret: capjavarocks
+cds.security.openUnrestrictedEndpoints: true
+---
+spring:
+    config:
+        activate:
+            on-profile: devtools-no-livereload
+    devtools:
+        livereload:
+            enabled: false
